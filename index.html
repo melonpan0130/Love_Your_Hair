@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+    </script>
+    <style>
+        body {
+            background-color: #E38A74;
+        }
+        #content {
+            margin: 20px auto;
+            border: solid 1px black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #face {
+            width: 400px;
+            height: 380px;
+            background-image: url('img/head.png');
+            border-radius: 50%;
+        }
+
+        #face img {
+            /* animation */
+            animation-name: MovingFace;
+            animation-direction: normal;
+            animation-iteration-count: infinite;
+        }
+        @keyframes MovingFace {
+            0% { transform: translateX(100%); }
+            50% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        #neck {
+            width: 200px;
+            height: 100px;
+            background-color: #FFE8B7;
+        }
+        button {
+            padding: 10px 50px;
+            border: none;
+            border-radius: 50px;
+            display: block;
+            margin: 0 auto;
+            font-size: 30px;
+            box-shadow: 5px 5px #8A867F;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="face">
+            <img src="img/face.png">
+        </div>
+        <div id="neck"></div>
+    </div>
+    
+    <button>Go to<br />Survey</button>
+    
+</body>
+</html>
